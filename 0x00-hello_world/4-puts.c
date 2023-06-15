@@ -3,6 +3,8 @@
 /**
  * main - Entry point
  *
+ * Description: C program that prints exactly using the function puts
+ *
  * Return: Always 0 (Success)
  */
 
