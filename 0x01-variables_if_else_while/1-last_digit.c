@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	int n;
+	int n, lastdigit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -20,7 +20,7 @@ int main(void)
 	printf("Last digit of %d ", n);
 	printf("is ");
 
-	int lastdigit = n % 10;
+	lastdigit = n % 10;
 
 	printf("%d ", lastdigit);
 
