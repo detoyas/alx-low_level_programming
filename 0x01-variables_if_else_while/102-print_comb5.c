@@ -10,32 +10,26 @@
 
 int main(void)
 {
-	int fdigit = 0, sdigit;
+	int i;
+	int j;
 
-	while (fdigit <= 99)
+	for (i = 0; i <= 99; i++)
 	{
-		sdigit = fdigit;
-		while (sdigit <= 99)
+		for (j = i + 1; j <= 99; j++)
 		{
-			if (sdigit != fdigit)
-			{
-				putchar((fdigit / 10) + 48);
-				putchar((fdigit % 10) + 48);
-				putchar(' ');
-				putchar((sdigit / 10) + 48);
-				putchar((sdigit % 10) + 48);
-			}
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
 
-			if (fdigit != 98 || sdigit != 99)
+			if (!(i == 98 && j == 99))
 			{
 				putchar(',');
 				putchar(' ');
 			}
-			sdigit++;
 		}
-		fdigit++;
 	}
 	putchar('\n');
-
 	return (0);
 }
