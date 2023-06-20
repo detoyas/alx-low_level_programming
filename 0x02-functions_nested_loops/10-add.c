@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * add - addition function
+ * add - addition operation function
  * @x: first integer
  * @y: second integer
  *
