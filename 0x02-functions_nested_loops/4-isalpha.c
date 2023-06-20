@@ -6,7 +6,7 @@
  *
  * Return: 1 character is an alphabetic
  *         0 character is not an alphabetic
- * */
+ */
 
 int _isalpha(int c)
 {
