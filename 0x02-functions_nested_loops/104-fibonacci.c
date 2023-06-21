@@ -16,7 +16,7 @@ int main(void)
 	printf("%lu, %lu, ", second_num1, second_num2);
 	for (count = 2; count < 98; count++)
 	{
-        	if (second_num1 + second_num2 > LARGEST || first_num2 > 0 || first_num1 > 0)
+		if (second_num1 + second_num2 > LARGEST || first_num2 > 0 || first_num1 > 0)
 		{
 			hold1 = (second_num1 + second_num2) / LARGEST;
 			hold2 = (second_num1 + second_num2) % LARGEST;
@@ -26,7 +26,7 @@ int main(void)
 			second_num1 = second_num2;
 			second_num2 = hold2;
 			printf("%lu%010lu", first_num2, second_num2);
-		} 
+		}
 		else
 		{
 			hold2 = second_num1 + second_num2;
@@ -34,8 +34,8 @@ int main(void)
 			second_num2 = hold2;
 			printf("%lu", second_num2);
 		}
-        	if (count != 97)
-            		printf(", ");
+		if (count != 97)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
