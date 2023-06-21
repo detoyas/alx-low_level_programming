@@ -8,25 +8,22 @@
 
 int main(void)
 {
-	int count = 2;
+	int count = 98;
+	int first = 1;
+	int second = 2;
 
-	float fib1 = 1;
-	float fib2 = fib1 + 1;
-	float sum = fib1 + fib2;
+	printf("%d, %d", first, second);
+	count -= 2;
 
-	printf("%.0f, ", fib1);
-	printf("%.0f, ", fib2);
-	while (count < 98)
+	while (count > 0)
 	{
-		count++;
-		printf("%.0f", sum);
-		fib1 = fib2;
-		fib2 = sum;
-		sum = fib1 + fib2;
-		if (count < 98)
-		{
-			printf(", ");
-		}
+		int next = first + second;
+
+		printf(", %d", next);
+
+		first = second;
+		second = next;
+		count--;
 	}
 	printf("\n");
 	return (0);
