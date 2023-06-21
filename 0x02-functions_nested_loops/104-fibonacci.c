@@ -9,26 +9,24 @@
 int main(void)
 {
 	int count = 98;
-	int first = 1;
-	int second = 2;
+	unsigned long long first = 1;
+	unsigned long long second = 2;
 
-	printf("%d, %d", first, second);
+	printf("%llu, %llu", first, second);
 	count -= 2;
 
 	while (count > 0)
 	{
-		int next = first + second;
-
-		if (next < 0)
-		{
-			break;
-		}
-		printf(", %d", next);
+		unsigned long long next = first + second;
+		
+		printf(", %llu", next);
 
 		first = second;
 		second = next;
 		count--;
 	}
 	printf("\n");
+	
 	return (0);
 }
+
