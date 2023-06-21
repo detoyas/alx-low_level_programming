@@ -21,7 +21,7 @@ int main(void)
 		printf("%ld", sum);
 
 		fib1 = fib2;
-		fib2 = sum
+		fib2 = sum;
 
 		if (count < 50)
 		{
