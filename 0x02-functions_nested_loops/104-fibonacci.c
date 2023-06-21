@@ -9,30 +9,30 @@
 
 int main(void)
 {
-	unsigned long int first_num1 = 0, second_num1 = 1, first_num2 = 0, second_num2 = 2;
+	unsigned long int fn1 = 0, sn1 = 1, fn2 = 0, sn2 = 2;
 	unsigned long int hold1, hold2, hold3;
 	int count;
 
-	printf("%lu, %lu, ", second_num1, second_num2);
+	printf("%lu, %lu, ", sn1, sn2);
 	for (count = 2; count < 98; count++)
 	{
-		if (second_num1 + second_num2 > LARGEST || first_num2 > 0 || first_num1 > 0)
+		if (sn1 + sn2 > LARGEST || fn2 > 0 || fn1 > 0)
 		{
-			hold1 = (second_num1 + second_num2) / LARGEST;
-			hold2 = (second_num1 + second_num2) % LARGEST;
-			hold3 = first_num1 + first_num2 + hold1;
-			first_num1 = first_num2;
-			first_num2 = hold3;
-			second_num1 = second_num2;
-			second_num2 = hold2;
-			printf("%lu%010lu", first_num2, second_num2);
+			hold1 = (sn1 + sn2) / LARGEST;
+			hold2 = (sn1 + sn2) % LARGEST;
+			hold3 = fn1 + fn2 + hold1;
+			fn1 = fn2;
+			fn2 = hold3;
+			sn1 = sn2;
+			sn2 = hold2;
+			printf("%lu%010lu", fn2, sn2);
 		}
 		else
 		{
-			hold2 = second_num1 + second_num2;
-			second_num1 = second_num2;
-			second_num2 = hold2;
-			printf("%lu", second_num2);
+			hold2 = sn1 + sn2;
+			sn1 = sn2;
+			sn2 = hold2;
+			printf("%lu", sn2);
 		}
 		if (count != 97)
 			printf(", ");
@@ -40,4 +40,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-
