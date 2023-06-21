@@ -8,25 +8,26 @@
 
 int main(void)
 {
-	int count = 98;
-	unsigned long long first = 1;
-	unsigned long long second = 2;
+	int counter = 2;
 
-	printf("%llu, %llu", first, second);
-	count -= 2;
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
 
-	while (count > 0)
+	printf("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
 	{
-		unsigned long long next = first + second;
-		
-		printf(", %llu", next);
-
-		first = second;
-		second = next;
-		count--;
+		counter++;
+		printf("%.0f", c);
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 98)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
-	
 	return (0);
 }
-
