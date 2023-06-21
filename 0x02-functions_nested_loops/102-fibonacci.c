@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Descriptipn: print Fibonacci numbers 
+ * Descriptipn: print Fibonacci numbers
  *
  * Return: Always 0 (Success)
  */
@@ -15,7 +15,7 @@ int main(void)
 	long int fib2 = 1;
 	long int sum;
 
-	for (count =0; count < 50; count++)
+	for (count = 0; count < 50; count++)
 	{
 		sum = fib1 + fib2;
 		printf("%ld", sum);
