@@ -19,6 +19,10 @@ int main(void)
 	{
 		int next = first + second;
 
+		if (next < 0)
+		{
+			break;
+		}
 		printf(", %d", next);
 
 		first = second;
