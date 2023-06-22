@@ -1,7 +1,7 @@
 0x04. C - More functions, more nested loops
 ===========================================
 
-[g-button button_type="warning" button_label="C"][/g-button]
+[![C]][]
 
 > Learning Objectives:
 
