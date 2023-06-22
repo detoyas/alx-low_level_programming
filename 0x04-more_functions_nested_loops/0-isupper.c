@@ -2,10 +2,10 @@
 
 /**
  * _isupper - function that checks for uppercase character
- * 
- * Return: 1 in case uppercase 
+ *
+ * Return: 1 in case uppercase
  *         0 if not
- * */
+ */
 
 int _isupper(int c)
 {
