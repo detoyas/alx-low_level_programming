@@ -1,7 +1,7 @@
 0x04. C - More functions, more nested loops
 ===========================================
 
-[![C]][]
+[![C](https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg)]()
 
 > Learning Objectives:
 
