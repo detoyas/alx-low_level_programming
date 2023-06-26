@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 
+/**
+ * 0x02 - Functions, nested loops
+ */
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -16,6 +19,9 @@ void times_table(void);
 int add(int, int);
 void print_to_98(int n);
 void print_times_table(int n);
+/**
+ * 0x04. C - More functions, more nested loops
+ */
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
@@ -27,5 +33,18 @@ void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
+/**
+ * 0x05. C - Pointers, arrays and strings
+ */
+void reset_to_98(int *n);
+void swap_int(int *a, int *b);
+int _strlen(char *s);
+void print_rev(char *s);
+void rev_string(char *s);
+void puts2(char *str);
+void puts_half(char *str);
+void print_array(int *a, int n);
+char *_strcpy(char *dest, char *src);
+
 
 #endif
