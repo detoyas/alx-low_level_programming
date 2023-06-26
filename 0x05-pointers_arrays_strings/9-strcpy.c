@@ -2,7 +2,7 @@
 
 /**
  * *_strcpy - copies the string pointed to by src (\0)
- * @dest: pointer to the buffer 
+ * @dest: pointer to the buffer
  * @src: string to copy
  *
  * Return: the pointer to dest
