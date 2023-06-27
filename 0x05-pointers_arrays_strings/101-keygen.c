@@ -1,28 +1,43 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
 
-/**
- * main - creates random passwords for 101-crackme 
- *
- * Return: 0 (Success)
- */
+unsigned long calculateChecksum(char *str)
+{
+	unsigned long total = 0;
+	while (*str != 0)
+	{
+		total += *str;
+		str++;
+	}
+	return total;
+}
+
 int main(void)
 {
-	int sum = 0;
-	char randchar;
+	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ";
+	char password[33];
+	unsigned long totalChecksum;
+	int index, flag = 0;
 
-	srand(time(0));
+	srand(time(NULL));
 
-	while (sum <= 2646)
+	while (flag == 0)
 	{
-		randchar = rand() % 128;
-		write(1, &randchar, 1);
-		sum += randchar;
-	}
+		for (index = 0; index < 33; index++)
+	{
+		password[index] = charset[rand() % (sizeof(charset) - 1)];
+	}	
+	password[index] = '\0';
 
-	randchar = 2772 - sum;
-	write(1, &randchar, 1);
-	return (0);
+	totalChecksum = calculateChecksum(password);
+	if (totalChecksum == 2772)
+		{
+		flag = 1;
+	printf("%s", password);
+		}	
+	}
+    return 0;
 }
+
