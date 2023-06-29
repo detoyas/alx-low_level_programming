@@ -3,7 +3,7 @@
 /**
  * rot13 - encrypts string using rot13
  * @s: string to encrypt
- * Return: 
+ * Return: char
  */
 
 char *rot13(char *s)
