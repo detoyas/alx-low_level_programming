@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * _indexOf - returns boolean if special  character
+ * _isdelimOf - returns boolean if special  character
  * @a: character to return
  * Return: true or false
  */
 
-int _indexOf(char a)
+int _isdelimOf(char c)
 {
 	int i;
-	char capArr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(',
+	char caparr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(',
 ')', '{', '}'};
 
 	for (i = 0; i < 13; i++)
 	{
-		if (capArr[i] == a)
+		if (caparr[i] == a)
 			return (1);
 	}
 	return (0);
@@ -32,9 +32,9 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (_indexOf(s[i]))
+		if (_isdelimOf(s[i]))
 			continue;
-		if (s[i] >= 'a' && s[i] <= 'z' && (_indexOf(s[i - 1]) || i == 0))
+		if (s[i] >= 'a' && s[i] <= 'z' && (_isdelimOf(s[i - 1]) || i == 0))
 			s[i] = s[i] - 32;
 
 	}
