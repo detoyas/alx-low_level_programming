@@ -2,7 +2,7 @@
 
 /**
  * _isdelimOf - returns boolean if special  character
- * @a: character to return
+ * @c: character to return
  * Return: true or false
  */
 
@@ -14,7 +14,7 @@ int _isdelimOf(char c)
 
 	for (i = 0; i < 13; i++)
 	{
-		if (caparr[i] == a)
+		if (caparr[i] == c)
 			return (1);
 	}
 	return (0);
