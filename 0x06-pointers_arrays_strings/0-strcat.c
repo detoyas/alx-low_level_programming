@@ -9,24 +9,20 @@
  * Return: pointer to string dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int j = 0;
+	int i;
+	int j;
 
-	while (dest[i] != '\0')
+	for (j = 0; dest[j] != '\0'; j++)
+	{}
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		i++;
+		dest[j + i] = src[i];
 	}
-
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j;
-
-	}
-	dest[i + j] = '\0';
+	dest[j + i] = '\0';
 
 	return (dest);
-}
 
+}
