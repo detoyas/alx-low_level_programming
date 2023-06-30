@@ -13,7 +13,7 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
-	
+
 	while (n1[a_len] != '\0')
 		a_len++;
 	while (n2[b_len] != '\0')
@@ -25,7 +25,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if ((biggest + 1) >= size_r)
 		return (0);
 	r[biggest + 1] = '\0';
-	
+
 	while (biggest >= 0)
 	{
 		a = (n1[a_len - 1] - '0');
@@ -38,7 +38,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			sum = a + carry;
 		else
 			sum = carry;
-		
+
 		if (sum > 9)
 		{
 			carry = sum / 10;
