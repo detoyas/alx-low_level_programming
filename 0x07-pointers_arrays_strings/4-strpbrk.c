@@ -8,31 +8,25 @@
  * Return: Length
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i, j, k, a;
+	unsigned int i, j;
+	char *f;
 
-	i = j = 0;
+	i = 0;
 	while (s[i] != 0)
 	{
-		k = 0;
-		a = 0;
-		while (accept[k] != 0)
+		j = 0;
+		while (accept[j] != 0)
 		{
-			if (s[i] != accept[k])
+			if (s[i] == accept[j])
 			{
-				k++;
+				f = &s[i];
+				return (f);
 			}
-			else if (s[i] == accept[k])
-			{
-				a++;
-				j++;
-				k++;
-			}
+			j++;
 		}
-		if (a == 0)
-			return (j);
 		i++;
 	}
-	return (j);
+	return (0);
 }
