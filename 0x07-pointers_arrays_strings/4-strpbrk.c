@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strspn - function that searches a string of bytes
+ * _strpbrk - function that searches a string of bytes
  * @s: String to search
  * @accept: acceptable bytes string can contain
  *
