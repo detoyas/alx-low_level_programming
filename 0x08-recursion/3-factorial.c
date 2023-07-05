@@ -3,8 +3,8 @@
 /**
  * factorial - function that returns factorial of n
  * @n: number input
- * 
- * Return: factorial of n 
+ *
+ * Return: factorial of n
  */
 
 int factorial(int n)
