@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - function that that multiplies two numbers
@@ -9,28 +10,36 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc == 1)
+	int i;
+	int j;
+	int c;
+	int sum;
+	char *s;
+
+	sum = 0;
+	c = 0;
+
+	i = 1;
+	while (i < argc)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-	int sum = 0;
-
-	for (int i = 1; i < argc; i++)
-	{
-		int j = 0;
-
-		while (argv[i][j] != '\0')
+		s = argv[i];
+		j = 0;
+		while (s[j] != '\0')
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
+			if (s[j] < '0' || s[j] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
 			j++;
 		}
-		sum += atoi(argv[i]);
+		i++;
+	}
+
+	for (i = 1; i < argc; i++)
+	{
+		c = atoi(argv[i]);
+		sum = sum + c;
 	}
 	printf("%d\n", sum);
 	return (0);
