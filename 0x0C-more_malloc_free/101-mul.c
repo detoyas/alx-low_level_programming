@@ -82,7 +82,7 @@ char *big_multiply(char *s1, char *s2)
 /**
  * main - multiply two big number strings
  * @argc: n of arguments
- * @argv: argument 
+ * @argv: argument
  *
  * Return: Always 0 success.
  */
