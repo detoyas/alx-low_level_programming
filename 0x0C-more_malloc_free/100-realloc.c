@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_realloc - reallocates a memory block 
+ * _realloc - reallocates a memory block
  * @ptr: pointer to old memory location
  * @old_size: unsigned int old memory size
  * @new_size: unsigned int new memory size
