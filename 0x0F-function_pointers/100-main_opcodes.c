@@ -16,12 +16,10 @@ int main(int argc, char **argv)
 	int nbyte;
 
 	if (argc != 2)
-		printf("Error\n");
-		exit(1);
+		printf("Error\n"), exit(1);
 	nbyte = atoi(argv[1]);
 	if (nbyte < 0)
-		printf("Error\n");
-		exit(2);
+		printf("Error\n"), exit(2);
 
 	while (nbyte--)
 		printf("%02hhx%s", *p++, nbyte ? " " : "\n");
