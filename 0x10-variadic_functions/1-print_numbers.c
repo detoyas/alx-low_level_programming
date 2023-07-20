@@ -3,7 +3,7 @@
 /**
  * print_numbers - prints numbers given as args
  * @separator: seperator char
- * @n: constant 
+ * @n: constant
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
